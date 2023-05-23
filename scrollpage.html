@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 導入格式重設檔 -->
+    <link rel="stylesheet" href="reset.css">
+<!-- 導入lightbox效果的js檔 -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <style>
+        .area{
+            width: 100%;
+            max-width: 1480px;
+            height: 1000px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 15px #666;
+            padding: 100px 50px 10px;
+        }
+        nav{
+            height: 100px;
+            background-color: #000000bf;
+            text-align: center;
+            line-height: 100px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        nav a,a :visited{
+            text-decoration: none;
+            margin: 5px;
+            background-color: #5dc07ebf;
+            color: #fff;
+            padding: 6px 20px;
+            border-radius: 5px;
+        }
+        nav a:hover,a :active{
+            text-decoration: none;
+            margin: 5px;
+            background-color: #ffffffbf;
+            color: #0f0c0c;
+            padding: 6px 20px;
+            border-radius: 5px;
+        }
+        #area1{
+            background: url(images/puckered.png) 0 0 no-repeat;
+            padding-top: 100px;
+        }
+        #area2{
+            background: url(images/slide2.jpg) 0 0 no-repeat;
+        }
+        #area3{
+            background: url(images/slide3.jpg) 0 0 no-repeat;
+        }
+        #area4{
+            background: url(images/slide4.jpg) 0 0 no-repeat;
+        }
+        footer a{
+            width: 60px;
+            height: 60px;
+            display: block;
+            /* 以display轉換為區塊元素才可採計寬高 */
+            background-color: #ffb300;
+            color: #fff;
+            border-radius: 50%;
+            text-decoration: none;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+        h2{
+            text-align: center;
+            font-size: 100px;
+            color: #fff;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+<!-- nav>a{AREA$$}*4 -->
+    <nav>
+        <a href="#area1">AREA01</a>
+        <a href="#area2">AREA02</a>
+        <a href="#area3">AREA03</a>
+        <a href="#area4">AREA04</a>
+    </nav>
+<!-- .wrap>section.area#area$*4 -->
+    <div class="wrap">
+        <section class="area" id="area1">
+            <h2>HELLO</h2>
+        </section>
+        <section class="area" id="area2">
+
+        </section>
+        <section class="area" id="area3">
+<!-- lightbox設計 -->
+            <a href="images/examples/image-1.jpg" rel="lightbox[roadtrip]"><img src="images/examples/thumb-1.jpg" alt=""></a>
+            <a href="images/examples/image-2.jpg" rel="lightbox[roadtrip]"><img src="images/examples/thumb-2.jpg" alt=""></a>
+            <a href="images/examples/image-3.jpg" rel="lightbox[roadtrip]"><img src="images/examples/thumb-3.jpg" alt=""></a>
+        </section>
+        <section class="area" id="area4">
+            <footer>
+                <a href="area1">TOP</a>
+            </footer>
+        </section>
+
+    </div>
+<!-- 導入視差捲動效果的js檔案 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="script.js"></script>
+    <!-- 注意執行順序，可能導致掛網 -->
+    <!-- 載入外掛的程式碼位置決定網站的負載狀況，分散資源 -->
+</body>
+</html>
